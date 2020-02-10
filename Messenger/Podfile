@@ -1,0 +1,24 @@
+platform :ios, '12.4'
+
+use_frameworks!
+
+inhibit_all_warnings!
+
+target 'app' do
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
+	pod 'Firebase/Storage'
+	pod 'OneSignal'
+	pod 'RealmSwift'
+	pod 'SinchRTC', '3.12.9'
+
+	pod 'CryptoSwift'
+	pod 'InputBarAccessoryView'
+	pod 'Kingfisher'
+	pod 'MessageKit'
+	pod 'NYTPhotoViewer', '1.2.0'
+	pod 'ProgressHUD'
+	pod 'Reachability'
+	pod 'RNCryptor-objc'
+	pod 'SoundManager'
+end
