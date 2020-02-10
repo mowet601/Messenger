@@ -116,9 +116,9 @@ This is a native iOS Messenger app, with audio/video calls and realtime chat con
 
 **8.,** Download `GoogleService-Info.plist` from your Firebase project and replace the existing file in your Xcode project.
 
-**9.,** For using push notification feature, create an account at [OneSignal](https://onesignal.com) and replace the `ONESIGNAL_APPID` define value in `AppConstant.h`. You will also need to [configure](https://documentation.onesignal.com/docs/generating-an-ios-push-certificate) your Push certificate details.
+**9.,** For using push notification feature, create an account at [OneSignal](https://onesignal.com) and replace the `ONESIGNAL_APPID` define value in `AppConstant.h`. You will also need to [configure](https://documentation.onesignal.com/docs/generate-an-ios-push-certificate) your Push certificate details.
 
-**10.,** For using audio and video call features, create an account at [Sinch](https://www.sinch.com) and replace the `SINCH_KEY` and `SINCH_SECRET` define values in `AppConstant.h`. You will also need to [configure](https://www.sinch.com/tutorials/ios8-apps-and-pushkit) your VoIP certificate details.
+**10.,** For using audio and video call features, create an account at [Sinch](https://www.sinch.com) and replace the `SINCH_KEY` and `SINCH_SECRET` define values in `AppConstant.h`. You will also need to [configure](https://developers.sinch.com/docs/how-to-use-pushkit-for-ios-voip-push-notifications) your VoIP certificate details.
 
 ---
 
