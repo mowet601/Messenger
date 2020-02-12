@@ -32,26 +32,4 @@ class DataFetcher: NSObject {
 			}
 		}
 	}
-
-	// MARK: -
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	class func fetchMissingMessages(_ chatIds: [String]) {
-
-		if (realm.objects(Message.self).count != 0) {
-			for chatId in chatIds {
-				fetchMissingMessages(chatId: chatId)
-			}
-		}
-	}
-
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	private class func fetchMissingMessages(chatId: String) {
-
-		let predicate = NSPredicate(format: "chatId == %@", chatId)
-		if (realm.objects(Message.self).filter(predicate).count == 0) {
-			let query = Firestore.firestore().collection("Message")
-				.whereField("chatId", isEqualTo: chatId)
-			DataFetch.perform(query, to: Message.self)
-		}
-	}
 }

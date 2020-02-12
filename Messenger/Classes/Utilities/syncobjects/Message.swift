@@ -39,10 +39,11 @@ class Message: SyncObject {
 	@objc dynamic var isDeleted = false
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	class func lastUpdatedAt() -> Int64 {
+	class func lastUpdatedAt(_ chatId: String) -> Int64 {
 
 		let realm = try! Realm()
-		let object = realm.objects(Message.self).sorted(byKeyPath: "updatedAt").last
+		let predicate = NSPredicate(format: "chatId == %@", chatId)
+		let object = realm.objects(Message.self).filter(predicate).sorted(byKeyPath: "updatedAt").last
 		return object?.updatedAt ?? 0
 	}
 
